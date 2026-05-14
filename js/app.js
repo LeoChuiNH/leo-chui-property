@@ -144,7 +144,7 @@
         </div>
         <div class="modal-cta-row">
           <a href="tel:+85290760190" class="btn btn-primary">致電查詢 9076 0190</a>
-          <a href="https://wa.me/85261822429?text=${encodeURIComponent('您好 Leo，我想查詢 ' + item.id + ' ' + item.name)}" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp 預約睇樓</a>
+          <a href="https://wa.me/85261822429?text=${encodeURIComponent('我想查詢 ' + item.id + ' ' + item.name)}" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp 預約睇樓</a>
           <span style="margin-left:auto;font-size:12px;color:var(--ink-500);">編號 ${item.id}</span>
         </div>
       </div>
@@ -193,7 +193,7 @@
     const phone = data.get('phone');
     const type = data.get('type');
     const message = data.get('message') || '';
-    const text = `您好 Leo，我是 ${name}，聯絡電話 ${phone}。\n查詢類型：${type}\n${message ? '留言：' + message : ''}`;
+    const text = `我是 ${name}，聯絡電話 ${phone}。\n查詢類型：${type}\n${message ? '留言：' + message : ''}`;
     const url = `https://wa.me/85261822429?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank', 'noopener');
   });
